@@ -12,7 +12,7 @@ headers = {'Host':'xss.re', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:24.0)
 			}
 patt_error = 'Password Errors'
 		
-
+		
 def bruteforce(username, password):
 	username = username.strip()
 	password = password.strip()
