@@ -38,7 +38,6 @@ def main():
 	except Exception as e:
 		print(e)
 		os._exit()
-	i=1
 	for username in f_username.readlines():
 		if username != '':
 			try:
