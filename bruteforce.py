@@ -5,12 +5,11 @@ from time import ctime
 
 Host = 'xss.re'
 url = 'http://xss.re/user/login'
-headers = {'Host':'xss.re', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:24.0) Gecko/20100101 Firefox/24.0', 
+headers = {	'Host':'xss.re', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:24.0) Gecko/20100101 Firefox/24.0', 
 			'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 
 			'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 
 			'DNT': '1', 'Referer': 'http://xss.re/xss/?do=user&act=login', 'Content-Type': 'application/x-www-form-urlencoded' 
 			}
-			
 patt_error = 'Password Errors'
 
 
