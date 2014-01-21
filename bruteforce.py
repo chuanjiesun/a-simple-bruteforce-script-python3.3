@@ -59,8 +59,8 @@ def main():
 
 if __name__ == '__main__':
 	print('bruteforce start at : {}'.format(ctime()))
-	t1 = ctime()
+	t1 = time()
 	main()
 	print('bruteforce stop at : {}'.format(ctime()))
-	t2 = ctime()
-	print('耗时：{}'.format(t2-t1))
+	t2 = time()
+	print('耗时：{} s'.format(t2-t1))
