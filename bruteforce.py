@@ -51,7 +51,6 @@ def main():
 				t.start()
 				threads.append(t)
 			for j in range(len(threads)):
-#				print('thread : {}'.format(j))
 				threads[j].join()
 			threads.clear()
 			f_password.close()
